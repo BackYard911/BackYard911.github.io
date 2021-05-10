@@ -33,7 +33,7 @@ const dir = {
 
 
 async function getData(locationKey="Cairo"){
-    let data = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=8d6cbe267a2b4758bff143035212804&q=${locationKey}&days=3&aqi=no&alerts=no`);
+    let data = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=8d6cbe267a2b4758bff143035212804&q=${locationKey}&days=3&aqi=no&alerts=no`);
     let response = await data.json();
     forecasts =  response.forecast.forecastday;
     curr = response.current;
